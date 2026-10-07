@@ -1,29 +1,53 @@
-# Informe – Evaluación Módulo 5
+# Informe – Evaluación final
 
-## Descripción
+# Lateral Lab – Proyecto Final
 
-Desarrollé una mini API REST para Lateral Lab que permite registrar personas interesadas mediante nombre, edad y ciudad. El backend valida los datos, guarda los registros en `clientes.json` y devuelve una respuesta personalizada. El frontend consume la API mediante `fetch()` y muestra el historial de registros.
+## 1. Descripción del proyecto
 
-## Tecnologías utilizadas
+Lateral Lab es un laboratorio orientado al desarrollo local, la innovación y el fortalecimiento de capacidades. El objetivo del sitio web es presentar de forma clara la propuesta del proyecto y facilitar el contacto con personas interesadas.
 
-Utilicé Node.js, Express.js, JavaScript, HTML5 y CSS. Para simular la persistencia de los datos utilicé un archivo JSON en lugar de una base de datos.
+El proyecto final integra los conocimientos desarrollados durante el curso, desde la construcción de la interfaz hasta el desarrollo del servidor y la gestión de datos.
 
-## Estructura de carpetas y organización
+## 2. Tecnologías utilizadas
 
-El proyecto está organizado en diferentes carpetas para separar las responsabilidades. `server.js` inicia el servidor; `public/` contiene la interfaz y el archivo `main.js`; `routes/` contiene las rutas de la API; `data/` contiene el archivo `clientes.json`; y `package.json` gestiona la dependencia de Express.
+### Frontend
+- HTML5
+- CSS3
+- JavaScript
 
-## Flujo completo de datos
+### Backend
+- Node.js
+- Express.js
 
-El usuario completa el formulario con su nombre, edad y ciudad. El archivo `main.js` envía los datos mediante `fetch()` utilizando una solicitud POST a `/clientes`. El servidor recibe la información y `clientes.js` valida los datos. Si son correctos, el registro se guarda en `clientes.json` y el servidor devuelve un mensaje personalizado. Después, el frontend realiza una solicitud GET a `/clientes` para obtener y mostrar el historial de registros.
+### Base de datos
+- MongoDB
+- Mongoose
 
-## ¿Qué validaciones implementaste?
+### Despliegue
+- GitHub para almacenamiento y versionamiento del proyecto.
 
-El servidor verifica que el nombre, la edad y la ciudad estén completos. También comprueba que la edad sea un número positivo. Estas validaciones se realizan en el servidor para garantizar que los datos recibidos sean correctos.
+## 3. Funcionamiento
 
-## ¿Qué aprendiste?
+El usuario interactúa con la página web y completa el formulario de solicitud de información. JavaScript procesa la interacción y envía los datos al servidor mediante una solicitud HTTP.
 
-Aprendí a construir una API utilizando Express.js, organizar las rutas en un archivo separado, recibir información en formato JSON, utilizar `fetch()` para comunicar el frontend con el backend y simular la persistencia de datos mediante un archivo JSON.
+Express.js recibe y valida la información a través de la API. Posteriormente, Mongoose permite gestionar la comunicación con MongoDB para almacenar y consultar los registros.
 
-## ¿Qué mejorarías?
+Flujo principal:
 
-Si tuviera más tiempo, incorporaría una base de datos real, autenticación de usuarios, validaciones más avanzadas y funcionalidades para editar y eliminar registros.
+Frontend → JavaScript → API Express.js → Mongoose → MongoDB
+
+## 4. Repositorio
+
+Repositorio GitHub:
+
+https://github.com/suberoluisana/proyecto-final-lateral-lab
+
+## 5. Aprendizajes y dificultades
+
+Durante el curso aprendí a desarrollar una solución web integrando frontend, backend y base de datos. También aprendí a trabajar con rutas, solicitudes HTTP, APIs, Node.js, Express.js y MongoDB.
+
+Una de las principales dificultades fue comprender cómo conectar las diferentes capas del proyecto y organizar correctamente los archivos y dependencias. La resolución de errores y el uso de herramientas de IA mediante prompting me ayudaron a comprender mejor el código y avanzar de manera progresiva.
+
+## 6. Mejoras futuras
+
+Si tuviera más tiempo, incorporaría nuevas funcionalidades, mejoraría la experiencia visual, agregaría validaciones adicionales y prepararía el proyecto para su publicación en un entorno de producción.
