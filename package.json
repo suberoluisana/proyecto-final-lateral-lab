@@ -1,12 +1,14 @@
 {
-  "name": "evaluacion-modulo4-avanzada",
+  "name": "proyecto-final-lateral-lab",
   "version": "1.0.0",
-  "description": "Mini API REST de clientes interesados para Lateral Lab",
+  "description": "Proyecto final web de Lateral Lab",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
   },
   "dependencies": {
-    "express": "^4.21.2"
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "mongoose": "^8.12.1"
   }
 }
