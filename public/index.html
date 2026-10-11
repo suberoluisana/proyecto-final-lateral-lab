@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Lateral Lab: laboratorio de desarrollo local, innovación y fortalecimiento de capacidades.">
+
+    <title>Lateral Lab | Desarrollo local + innovación</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ===== NAVEGACIÓN ===== -->
+    <header class="navbar">
+        <div class="container nav-inner">
+
+            <a href="#inicio" class="logo">
+                <span class="logo-mark">L</span>
+                Lateral Lab
+            </a>
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false">
+                ☰
+            </button>
+
+            <nav>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#nosotros">Nosotros</a></li>
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#metodo">Cómo trabajamos</a></li>
+                    <li><a href="#preguntas">Preguntas</a></li>
+                    <li><a href="#contacto" class="btn-nav">Contacto</a></li>
+                </ul>
+            </nav>
+
+        </div>
+    </header>
+
+
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="inicio">
+        <div class="container">
+
+            <p class="eyebrow">LATERAL LAB</p>
+
+            <h1>Conectemos para crear oportunidades.</h1>
+
+            <p class="intro">
+                Somos un laboratorio orientado al desarrollo local, la innovación
+                y el fortalecimiento de capacidades. Acompañamos a personas,
+                organizaciones y comunidades a convertir ideas en proyectos reales.
+            </p>
+
+            <div class="hero-actions">
+                <a href="#contacto" class="btn btn-primary">Quiero participar</a>
+                <a href="#servicios" class="btn btn-ghost">Ver servicios</a>
+            </div>
+
+        </div>
+    </section>
+
+
+    <main>
+
+        <!-- ===== NOSOTROS: PROBLEMA Y PROPUESTA DE VALOR ===== -->
+        <section class="section" id="nosotros">
+            <div class="container two-cols">
+
+                <div>
+                    <p class="section-tag">El problema</p>
+                    <h2>Muchas buenas ideas locales no llegan a concretarse.</h2>
+                    <p>
+                        Emprendedores, organizaciones sociales y equipos comunitarios
+                        suelen tener propuestas valiosas, pero les faltan herramientas,
+                        redes de apoyo y metodologías para desarrollarlas.
+                    </p>
+                </div>
+
+                <div>
+                    <p class="section-tag">Nuestra propuesta</p>
+                    <h2>Un espacio para aprender, conectar y crear.</h2>
+                    <p>
+                        En Lateral Lab combinamos formación práctica, acompañamiento
+                        y trabajo en red para que cada proyecto avance con claridad
+                        y genere impacto en su territorio.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- ===== PÚBLICO OBJETIVO ===== -->
+        <section class="section section-alt">
+            <div class="container">
+
+                <p class="section-tag center">¿Para quién es?</p>
+                <h2 class="center">Trabajamos con</h2>
+
+                <div class="grid-3">
+                    <article class="card">
+                        <span class="card-icon">◆</span>
+                        <h3>Emprendedores</h3>
+                        <p>Personas que quieren validar y fortalecer una idea de negocio con impacto local.</p>
+                    </article>
+
+                    <article class="card">
+                        <span class="card-icon">◆</span>
+                        <h3>Organizaciones</h3>
+                        <p>Fundaciones, colectivos y equipos que buscan innovar en sus programas.</p>
+                    </article>
+
+                    <article class="card">
+                        <span class="card-icon">◆</span>
+                        <h3>Comunidades</h3>
+                        <p>Grupos que quieren desarrollar capacidades y proyectos para su territorio.</p>
+                    </article>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- ===== SERVICIOS ===== -->
+        <section class="section" id="servicios">
+            <div class="container">
+
+                <p class="section-tag center">Servicios</p>
+                <h2 class="center">¿Qué hacemos?</h2>
+
+                <div class="grid-3">
+                    <article class="card card-service">
+                        <h3>Talleres de formación</h3>
+                        <p>Espacios prácticos para desarrollar habilidades en innovación, gestión de proyectos y herramientas digitales.</p>
+                    </article>
+
+                    <article class="card card-service">
+                        <h3>Acompañamiento de proyectos</h3>
+                        <p>Asesoría para diseñar, ordenar y poner en marcha iniciativas con impacto local.</p>
+                    </article>
+
+                    <article class="card card-service">
+                        <h3>Red de colaboración</h3>
+                        <p>Conectamos a personas y organizaciones para compartir recursos, ideas y oportunidades.</p>
+                    </article>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- ===== CÓMO TRABAJAMOS (pestañas interactivas con JavaScript) ===== -->
+        <section class="section section-alt" id="metodo">
+            <div class="container">
+
+                <p class="section-tag center">Metodología</p>
+                <h2 class="center">Cómo trabajamos</h2>
+
+                <div class="tabs" role="tablist">
+                    <button class="tab active" role="tab" data-tab="0" aria-selected="true">1. Escuchar</button>
+                    <button class="tab" role="tab" data-tab="1" aria-selected="false">2. Diseñar</button>
+                    <button class="tab" role="tab" data-tab="2" aria-selected="false">3. Probar</button>
+                    <button class="tab" role="tab" data-tab="3" aria-selected="false">4. Crecer</button>
+                </div>
+
+                <div class="tab-panel card" id="tabPanel" role="tabpanel" aria-live="polite">
+                    <h3 id="tabTitulo"></h3>
+                    <p id="tabTexto"></p>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- ===== PREGUNTAS FRECUENTES (acordeón interactivo) ===== -->
+        <section class="section" id="preguntas">
+            <div class="container narrow">
+
+                <p class="section-tag center">FAQ</p>
+                <h2 class="center">Preguntas frecuentes</h2>
+
+                <div class="faq">
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            ¿Necesito experiencia previa para participar?
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>No. Nuestros espacios están pensados para distintos niveles; lo importante es tener interés y ganas de aprender.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            ¿Cómo me pongo en contacto?
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Completa el formulario de esta página. Tus datos quedan registrados y el equipo se comunicará contigo.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            ¿Trabajan con organizaciones de cualquier ciudad?
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Sí. Muchas de nuestras actividades pueden realizarse de forma virtual, y adaptamos el trabajo al contexto de cada territorio.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- ===== CONTACTO: FORMULARIO → API EXPRESS → MONGODB ===== -->
+        <section class="section section-dark" id="contacto">
+            <div class="container two-cols">
+
+                <div class="card form-card">
+                    <h2>Registro de personas interesadas</h2>
+                    <p>
+                        Completa el formulario. La información se envía al servidor
+                        y se guarda en la base de datos.
+                    </p>
+
+                    <form id="clienteForm" novalidate>
+
+                        <label for="nombre">Nombre</label>
+                        <input type="text" id="nombre" name="nombre" required placeholder="Escribe tu nombre">
+
+                        <label for="edad">Edad</label>
+                        <input type="number" id="edad" name="edad" min="1" required placeholder="Ej. 25">
+
+                        <label for="ciudad">Ciudad</label>
+                        <input type="text" id="ciudad" name="ciudad" required placeholder="Escribe tu ciudad">
+
+                        <button type="submit" class="btn btn-primary" id="btnEnviar">
+                            Registrar interés
+                        </button>
+
+                    </form>
+
+                    <div id="respuesta" aria-live="polite"></div>
+                </div>
+
+                <div class="card">
+                    <h2>Últimos registros</h2>
+                    <p class="muted" id="notaRegistros">Datos consultados desde MongoDB.</p>
+                    <ul id="listaClientes" class="lista-clientes"></ul>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="container">
+            <p class="logo footer-logo">
+                <span class="logo-mark">L</span>
+                Lateral Lab
+            </p>
+            <p>Desarrollo local + innovación · <span id="anio"></span></p>
+        </div>
+    </footer>
+
+
+    <script src="main.js"></script>
+
+</body>
+
+</html>

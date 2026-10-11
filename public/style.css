@@ -1,0 +1,485 @@
+/* ===== Identidad visual de Lateral Lab =====
+   Colores: azul pizarra #1f2933 (principal), coral #ff6b4a (acento),
+   crema #f5f5f2 (fondo).
+   Tipografías: Space Grotesk (títulos) e Inter (textos). */
+
+:root {
+    --oscuro: #1f2933;
+    --acento: #ff6b4a;
+    --acento-hover: #e85535;
+    --fondo: #f5f5f2;
+    --blanco: #ffffff;
+    --texto: #222;
+    --gris: #5f6b76;
+    --borde: #d9dcd6;
+    --radio: 14px;
+    --sombra: 0 5px 20px rgba(0, 0, 0, 0.06);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: "Inter", Arial, sans-serif;
+    background: var(--fondo);
+    color: var(--texto);
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    font-family: "Space Grotesk", Arial, sans-serif;
+    line-height: 1.2;
+}
+
+a {
+    color: inherit;
+}
+
+.container {
+    width: min(1040px, 92%);
+    margin: 0 auto;
+}
+
+.narrow {
+    width: min(720px, 92%);
+}
+
+.center {
+    text-align: center;
+}
+
+.muted {
+    color: var(--gris);
+}
+
+/* ===== Navegación ===== */
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: var(--oscuro);
+    color: var(--blanco);
+}
+
+.nav-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 0;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: "Space Grotesk", Arial, sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.logo-mark {
+    display: grid;
+    place-items: center;
+    width: 34px;
+    height: 34px;
+    border-radius: 8px;
+    background: var(--acento);
+    color: var(--blanco);
+    transform: skewX(-8deg);
+}
+
+.nav-links {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    font-size: 15px;
+    opacity: 0.9;
+}
+
+.nav-links a:hover {
+    opacity: 1;
+    color: var(--acento);
+}
+
+.btn-nav {
+    padding: 8px 16px;
+    border: 1px solid var(--acento);
+    border-radius: 999px;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: 0;
+    color: var(--blanco);
+    font-size: 26px;
+    cursor: pointer;
+}
+
+/* ===== Botones ===== */
+
+.btn {
+    display: inline-block;
+    padding: 14px 24px;
+    border-radius: 8px;
+    font-weight: 700;
+    text-decoration: none;
+    border: 0;
+    cursor: pointer;
+    font-size: 15px;
+    transition: background 0.2s, transform 0.2s;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+.btn-primary {
+    background: var(--acento);
+    color: var(--blanco);
+}
+
+.btn-primary:hover {
+    background: var(--acento-hover);
+}
+
+.btn-primary:disabled {
+    opacity: 0.6;
+    cursor: wait;
+    transform: none;
+}
+
+.btn-ghost {
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    color: var(--blanco);
+}
+
+/* ===== Hero ===== */
+
+.hero {
+    padding: 90px 0 80px;
+    background:
+        radial-gradient(circle at 85% 20%, rgba(255, 107, 74, 0.25), transparent 40%),
+        var(--oscuro);
+    color: var(--blanco);
+}
+
+.eyebrow {
+    letter-spacing: 3px;
+    font-size: 13px;
+    color: var(--acento);
+    font-weight: 700;
+}
+
+.hero h1 {
+    font-size: clamp(34px, 6vw, 56px);
+    max-width: 720px;
+    margin: 10px 0 20px;
+}
+
+.intro {
+    font-size: 18px;
+    max-width: 620px;
+    opacity: 0.9;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+/* ===== Secciones ===== */
+
+.section {
+    padding: 70px 0;
+}
+
+.section-alt {
+    background: var(--blanco);
+}
+
+.section-dark {
+    background: var(--oscuro);
+}
+
+.section h2 {
+    font-size: clamp(26px, 4vw, 34px);
+    margin-top: 0;
+}
+
+.section-tag {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--acento);
+    margin-bottom: 8px;
+}
+
+.two-cols {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-top: 36px;
+}
+
+/* ===== Tarjetas ===== */
+
+.card {
+    background: var(--blanco);
+    border-radius: var(--radio);
+    padding: 28px;
+    box-shadow: var(--sombra);
+}
+
+.section-alt .card {
+    background: var(--fondo);
+}
+
+.card h3 {
+    margin-top: 0;
+}
+
+.card-icon {
+    color: var(--acento);
+    font-size: 22px;
+}
+
+.card-service {
+    border-top: 4px solid var(--acento);
+}
+
+/* ===== Pestañas ===== */
+
+.tabs {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 32px 0 20px;
+}
+
+.tab {
+    padding: 10px 20px;
+    border: 1px solid var(--borde);
+    border-radius: 999px;
+    background: var(--blanco);
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+}
+
+.tab.active {
+    background: var(--oscuro);
+    border-color: var(--oscuro);
+    color: var(--blanco);
+}
+
+.tab-panel {
+    max-width: 680px;
+    margin: 0 auto;
+    text-align: center;
+    animation: aparecer 0.3s ease;
+}
+
+@keyframes aparecer {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== FAQ ===== */
+
+.faq {
+    margin-top: 32px;
+}
+
+.faq-item {
+    background: var(--blanco);
+    border-radius: 10px;
+    margin-bottom: 12px;
+    box-shadow: var(--sombra);
+    overflow: hidden;
+}
+
+.faq-question {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    padding: 18px 22px;
+    background: none;
+    border: 0;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: left;
+    cursor: pointer;
+}
+
+.faq-icon {
+    font-size: 22px;
+    color: var(--acento);
+    transition: transform 0.2s;
+}
+
+.faq-item.open .faq-icon {
+    transform: rotate(45deg);
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 22px;
+    transition: max-height 0.3s ease;
+}
+
+.faq-answer p {
+    margin: 0 0 18px;
+    color: var(--gris);
+}
+
+/* ===== Formulario ===== */
+
+form {
+    display: grid;
+    gap: 8px;
+}
+
+label {
+    font-weight: 600;
+    margin-top: 8px;
+}
+
+input {
+    padding: 13px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 15px;
+    font-family: inherit;
+}
+
+input:focus {
+    outline: 2px solid var(--acento);
+    border-color: transparent;
+}
+
+form .btn {
+    margin-top: 16px;
+}
+
+#respuesta:not(:empty) {
+    margin-top: 20px;
+    padding: 14px;
+    border-radius: 8px;
+}
+
+.success {
+    background: #e8f5e9;
+    color: #1b5e20;
+}
+
+.error {
+    background: #ffebee;
+    color: #b71c1c;
+}
+
+.lista-clientes {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.lista-clientes li {
+    padding: 12px 0;
+    border-bottom: 1px solid var(--borde);
+}
+
+.lista-clientes li:last-child {
+    border-bottom: 0;
+}
+
+.lista-clientes strong {
+    display: block;
+}
+
+.lista-clientes span {
+    color: var(--gris);
+    font-size: 14px;
+}
+
+/* ===== Footer ===== */
+
+.footer {
+    background: #161e26;
+    color: #b8c0c8;
+    text-align: center;
+    padding: 32px 0;
+}
+
+.footer-logo {
+    justify-content: center;
+    color: var(--blanco);
+}
+
+/* ===== Responsive ===== */
+
+@media (max-width: 800px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        gap: 0;
+        background: var(--oscuro);
+        padding: 10px 0 20px;
+    }
+
+    .nav-links.open {
+        display: flex;
+    }
+
+    .nav-links li {
+        padding: 10px 0;
+    }
+
+    .two-cols,
+    .grid-3 {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        padding: 60px 0;
+    }
+}
